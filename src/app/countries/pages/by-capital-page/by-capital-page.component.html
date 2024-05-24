@@ -1,0 +1,26 @@
+<h2>Por Capital </h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!--Search box -->
+    <shared-search-box
+    [initialValue]="initialValue"
+    (onDebounce)="searchByCapital($event)"
+    />
+</div>
+</div>
+
+<hr>
+<div class="row">
+    <div class="col">
+
+        <shared-loading-spinner *ngIf="isloading"/>
+        <!-- [countries]="countries" -->
+        <countries-table [countries]="countries"></countries-table>
+        <!-- <ul>
+            <li *ngFor="let country of countries">
+            {{country.capital}} - {{country.population}}</li>
+        </ul>  -->
+    </div>
+</div>

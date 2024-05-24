@@ -1,0 +1,31 @@
+<h2>Por Región </h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!--Search box -->
+    <!-- <shared-search-box
+    (onDebounce)="searchRegion($event)"
+    /> -->
+
+    <button *ngFor="let region of regiones"
+    class="btn mx-2"
+    [ngClass]="{ 'btn-outline-primary' : this.selectRegion===region  }"
+    (click)="searchRegion(region)">{{region}}
+
+    </button>
+
+</div>
+</div>
+
+<hr>
+<div class="row">
+    <div class="col">
+        <!-- [countries]="countries" -->
+        <countries-table [countries]="countries"></countries-table>
+        <!-- <ul>
+            <li *ngFor="let country of countries">
+            {{country.capital}} - {{country.population}}</li>
+        </ul>  -->
+    </div>
+</div>
